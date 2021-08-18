@@ -59,7 +59,7 @@ public:
         auto pod_msg_data = static_cast<double>(count_);
         loaned_msg.get().data = pod_msg_data;
 
-        RCLCPP_INFO(this->get_logger(), "Publishing: '%f'", pod_msg_data);
+        RCLCPP_INFO(this->get_logger(), "Publishing: '%f' --- %p", pod_msg_data, static_cast<void *>(&(loaned_msg.get().data)));
         // As the middleware might own the memory allocated for this message,
         // a call to publish explicitly transfers ownership back to the middleware.
         // The loaned message instance is thus no longer valid after a call to publish.

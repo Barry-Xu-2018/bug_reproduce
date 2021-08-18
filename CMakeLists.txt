@@ -16,9 +16,21 @@ ament_target_dependencies(data_sharing_listener rclcpp std_msgs)
 add_executable(data_sharing_talker src/data_share/talker_loaned_message.cpp)
 ament_target_dependencies(data_sharing_talker rclcpp std_msgs)
 
+add_executable(rclcpp_1694 src/rclcpp_1694/rclcpp_1694.cpp)
+ament_target_dependencies(rclcpp_1694 rclcpp)
+
+add_executable(rclcpp_1691 src/rclcpp_1691/rclcpp_1691.cpp)
+ament_target_dependencies(rclcpp_1691 rclcpp)
+
+add_executable(rclcpp_1749 src/rclcpp_1749/test_params_node.cpp)
+ament_target_dependencies(rclcpp_1749 rclcpp)
+
 install(TARGETS
   data_sharing_listener
   data_sharing_talker
+  rclcpp_1694
+  rclcpp_1691
+  rclcpp_1749
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
