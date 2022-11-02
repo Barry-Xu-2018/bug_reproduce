@@ -37,6 +37,7 @@ setup(
 						'rclpy_834 = src.rclpy_834:main',
 						'rclpy_837 = src.rclpy_837:main',
             'rclpy_1030 = src.rclpy_1030:main',
+            'rclpy_1034 = src.rclpy_1034:main',
         ],
     },
 )
