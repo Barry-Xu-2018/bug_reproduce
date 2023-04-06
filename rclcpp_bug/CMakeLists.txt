@@ -42,6 +42,9 @@ ament_target_dependencies(rclcpp_2012 rclcpp std_msgs)
 add_executable(rmw_fastrtps_635 src/rmw_fastrtps_635/rmw_fastrtps_635.cpp)
 ament_target_dependencies(rmw_fastrtps_635 rclcpp builtin_interfaces std_msgs)
 
+add_executable(rmw_fastrtps_681 src/rmw_fastrtps_681/rmw_fastrtps_681.cpp)
+ament_target_dependencies(rmw_fastrtps_681 rclcpp std_msgs)
+
 install(TARGETS
   data_sharing_listener
   data_sharing_talker
@@ -52,6 +55,7 @@ install(TARGETS
   rclcpp_1809
   rclcpp_1983
   rmw_fastrtps_635
+  rmw_fastrtps_681
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
