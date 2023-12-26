@@ -57,6 +57,7 @@ install(TARGETS
   rclcpp_1785
   rclcpp_1809
   rclcpp_1983
+  rclcpp_2012
   rclcpp_2154
   rmw_fastrtps_635
   rmw_fastrtps_681

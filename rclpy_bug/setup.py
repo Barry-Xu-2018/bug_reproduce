@@ -34,12 +34,13 @@ setup(
         'console_scripts': [
             #'rclpy_585 = src.rclpy_585:main',
             #'rclpy_760 = src.rclpy_760:main',
-			'rclpy_834 = src.rclpy_834:main',
-			'rclpy_837 = src.rclpy_837:main',
+						'rclpy_834 = src.rclpy_834:main',
+						'rclpy_837 = src.rclpy_837:main',
             'rclpy_1030 = src.rclpy_1030:main',
             'rclpy_1034 = src.rclpy_1034:main',
             'rclpy_1018 = src.rclpy_1018:main',
-            'rclpy_1092 = src.rclpy_1092:main'
+            'rclpy_1092 = src.rclpy_1092:main',
+            'rclpy_1159 = src.rclpy_1159:main'
         ],
     },
 )
