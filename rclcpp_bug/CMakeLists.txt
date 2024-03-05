@@ -42,6 +42,12 @@ ament_target_dependencies(rclcpp_2012 rclcpp std_msgs)
 add_executable(rclcpp_2154 src/rclcpp_2154/rclcpp_2154.cpp)
 ament_target_dependencies(rclcpp_2154 rclcpp rcl_interfaces std_msgs)
 
+add_executable(rclcpp_2399 src/rclcpp_2399/rclcpp_2399.cpp)
+ament_target_dependencies(rclcpp_2399 rclcpp rcl_interfaces std_msgs)
+
+add_executable(rclcpp_2445 src/rclcpp_2445/rclcpp_2445.cpp)
+ament_target_dependencies(rclcpp_2445 rclcpp std_msgs)
+
 add_executable(rmw_fastrtps_635 src/rmw_fastrtps_635/rmw_fastrtps_635.cpp)
 ament_target_dependencies(rmw_fastrtps_635 rclcpp builtin_interfaces std_msgs)
 
@@ -59,6 +65,8 @@ install(TARGETS
   rclcpp_1983
   rclcpp_2012
   rclcpp_2154
+  rclcpp_2399
+  rclcpp_2445
   rmw_fastrtps_635
   rmw_fastrtps_681
   DESTINATION lib/${PROJECT_NAME})
