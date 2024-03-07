@@ -11,6 +11,8 @@ find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(std_srvs REQUIRED)
 find_package(example_interfaces REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(bug_reproduce_interfaces REQUIRED)
 
 add_executable(data_sharing_listener src/data_share/listener.cpp)
 ament_target_dependencies(data_sharing_listener rclcpp std_msgs)
@@ -48,6 +50,12 @@ ament_target_dependencies(rclcpp_2399 rclcpp rcl_interfaces std_msgs)
 add_executable(rclcpp_2445 src/rclcpp_2445/rclcpp_2445.cpp)
 ament_target_dependencies(rclcpp_2445 rclcpp std_msgs)
 
+add_executable(rclcpp_2446_pub src/rclcpp_2446/pub.cpp)
+ament_target_dependencies(rclcpp_2446_pub rclcpp std_msgs bug_reproduce_interfaces)
+
+add_executable(rclcpp_2446_sub src/rclcpp_2446/sub.cpp)
+ament_target_dependencies(rclcpp_2446_sub rclcpp std_msgs bug_reproduce_interfaces)
+
 add_executable(rmw_fastrtps_635 src/rmw_fastrtps_635/rmw_fastrtps_635.cpp)
 ament_target_dependencies(rmw_fastrtps_635 rclcpp builtin_interfaces std_msgs)
 
@@ -67,6 +75,8 @@ install(TARGETS
   rclcpp_2154
   rclcpp_2399
   rclcpp_2445
+  rclcpp_2446_pub
+  rclcpp_2446_sub
   rmw_fastrtps_635
   rmw_fastrtps_681
   DESTINATION lib/${PROJECT_NAME})
