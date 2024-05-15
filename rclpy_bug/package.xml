@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="2">
-  <name>bug_reproduce_rclpy</name>
+  <name>bug_reproduce_py</name>
   <version>0.1.0</version>
   <description>
-    rclcpy test codes to reproduce bug
+    rclpy test codes to reproduce bug
   </description>
   <maintainer email="Barry.Xu@sony.com">Barry Xu</maintainer>
   <license>Apache License 2.0</license>

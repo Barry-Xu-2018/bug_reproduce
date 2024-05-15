@@ -7,7 +7,6 @@ endif()
 
 # Find dependencies
 find_package(ament_cmake REQUIRED)
-find_package(rclcpp REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 #Glob together all the message files
