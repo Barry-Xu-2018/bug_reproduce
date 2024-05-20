@@ -1,7 +1,7 @@
 from setuptools import find_packages
 from setuptools import setup
 
-package_name = 'bug_reproduce_rclpy'
+package_name = 'bug_reproduce_py'
 
 setup(
     name=package_name,
@@ -40,7 +40,8 @@ setup(
             'rclpy_1034 = src.rclpy_1034:main',
             'rclpy_1018 = src.rclpy_1018:main',
             'rclpy_1092 = src.rclpy_1092:main',
-            'rclpy_1159 = src.rclpy_1159:main'
+            'rclpy_1159 = src.rclpy_1159:main',
+            'rclcpp_2533 = src.rclcpp_2533:main'
         ],
     },
 )
