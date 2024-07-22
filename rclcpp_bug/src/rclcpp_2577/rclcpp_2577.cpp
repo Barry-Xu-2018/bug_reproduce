@@ -10,7 +10,8 @@ int main(int argc, char ** argv)
   node->declare_parameter("param", std::vector<int>{});
 
   // Getting Params
-  std::vector<int> clamps_iters = {1,2,3};
+  // std::vector<int> clamps_iters = {1,2,3}; # Should work
+  std::vector<int64_t> clamps_iters = {1,2,3};
   node->get_parameter("param", clamps_iters);
 
   rclcpp::spin(node);
