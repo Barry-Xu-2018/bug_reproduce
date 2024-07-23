@@ -25,7 +25,7 @@ def main(args=None):
         pass
     finally:
       node.destroy_node()
-      rclpy.try_shutdown()
+      #add_node
 
 if __name__ == '__main__':
     main()
