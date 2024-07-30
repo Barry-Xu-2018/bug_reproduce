@@ -20,6 +20,8 @@ find_package(std_srvs REQUIRED)
 find_package(example_interfaces REQUIRED)
 #find_package(rosidl_default_generators REQUIRED)
 find_package(bug_reproduce_interfaces REQUIRED)
+find_package(rclcpp_action REQUIRED)
+find_package(action_tutorials_interfaces REQUIRED)
 
 add_executable(data_sharing_listener src/data_share/listener.cpp)
 ament_target_dependencies(data_sharing_listener rclcpp std_msgs)
@@ -72,6 +74,9 @@ ament_target_dependencies(rmw_fastrtps_681 rclcpp std_msgs)
 add_executable(rclcpp_2577 src/rclcpp_2577/rclcpp_2577.cpp)
 ament_target_dependencies(rclcpp_2577 rclcpp)
 
+add_executable(rclcpp_2101 src/rclcpp_2101/rclcpp_2101.cpp)
+ament_target_dependencies(rclcpp_2101 rclcpp_action action_tutorials_interfaces)
+
 install(TARGETS
   data_sharing_listener
   data_sharing_talker
@@ -90,6 +95,7 @@ install(TARGETS
   rmw_fastrtps_635
   rmw_fastrtps_681
   rclcpp_2577
+  rclcpp_2101
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
