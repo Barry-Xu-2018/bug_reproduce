@@ -45,7 +45,9 @@ setup(
             'rclpy_1303 = src.rclpy_1303:main',
             'rclpy_1315 = src.rclpy_1315:main',
             'rclpy_1209 = src.rclpy_1209:main',
-            'rclcpp_2101 = src.rclcpp_2101:main'
+            'rclcpp_2101 = src.rclcpp_2101:main',
+            'rclpy_1371s = src.rclpy_1371s:main',
+            'rclpy_1371c = src.rclpy_1371c:main'
         ],
     },
 )
