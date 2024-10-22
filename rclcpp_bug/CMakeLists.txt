@@ -99,6 +99,7 @@ install(TARGETS
   rmw_fastrtps_681
   rclcpp_2577
   rclcpp_2101
+  rclcpp_2655
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
