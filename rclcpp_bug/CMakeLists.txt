@@ -80,6 +80,9 @@ ament_target_dependencies(rclcpp_2101 rclcpp_action example_interfaces)
 add_executable(rclcpp_2655 src/rclcpp_2655/rclcpp_2655.cpp)
 ament_target_dependencies(rclcpp_2655 rclcpp std_msgs)
 
+add_executable(rclcpp_2664 src/rclcpp_2664/rclcpp_2664.cpp)
+ament_target_dependencies(rclcpp_2664 rclcpp std_msgs)
+
 install(TARGETS
   data_sharing_listener
   data_sharing_talker
@@ -100,6 +103,7 @@ install(TARGETS
   rclcpp_2577
   rclcpp_2101
   rclcpp_2655
+  rclcpp_2664
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
