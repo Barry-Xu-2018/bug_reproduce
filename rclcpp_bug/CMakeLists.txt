@@ -83,6 +83,11 @@ target_link_libraries(rclcpp_2655 PUBLIC rclcpp::rclcpp ${std_msgs_TARGETS})
 add_executable(rclcpp_2664 src/rclcpp_2664/rclcpp_2664.cpp)
 target_link_libraries(rclcpp_2664 PUBLIC rclcpp::rclcpp ${std_msgs_TARGETS})
 
+add_executable(rcl_1777 src/rcl_1777/rcl_1777.cpp)
+target_link_libraries(rcl_1777 PUBLIC rclcpp::rclcpp)
+target_compile_options(rcl_1777 PRIVATE -fsanitize=address -fno-omit-frame-pointer)
+target_link_options(rcl_1777 PRIVATE -fsanitize=address)
+
 install(TARGETS
   data_sharing_listener
   data_sharing_talker
@@ -104,6 +109,7 @@ install(TARGETS
   rclcpp_2101
   rclcpp_2655
   rclcpp_2664
+  rcl_1777
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
