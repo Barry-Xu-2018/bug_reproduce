@@ -13,7 +13,12 @@ int main(int argc, char ** argv)
   }
 
   char filename[] = "/tmp/test_params.yaml";
-  (void)rcl_parse_yaml_file(filename, params);
+  bool ret = rcl_parse_yaml_file(filename, params);
+  if (!ret) {
+    rcutils_error_string_t error_string = rcutils_get_error_string();
+    fprintf(stderr, "%s\n", error_string.str);
+    rcutils_reset_error();
+  }
 
   rcl_yaml_node_struct_fini(params);
 
