@@ -6,6 +6,8 @@ import rclpy.parameter
 def main(args=None):
     rclpy.init(args=args)
 
-    output = rclpy.parameter.parameter_dict_from_yaml_file(parameter_file='/root/ros2_src_jazzy/test.yaml', use_wildcard=True)
-    print(output)
+    output = rclpy.parameter.parameter_dict_from_yaml_file(
+        parameter_file='/tmp/test.yaml', use_wildcard=True, target_nodes=['param_test_target3'])
+    import pprint
+    pprint.pprint(output, indent=2)
     rclpy.shutdown()
