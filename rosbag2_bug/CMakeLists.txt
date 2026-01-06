@@ -18,8 +18,12 @@ find_package(rosbag2_transport REQUIRED)
 add_executable(rosbag2_2266 rosbag2_2266/rosbag2_2266.cpp)
 target_link_libraries(rosbag2_2266 PUBLIC rosbag2_transport::rosbag2_transport)
 
+add_executable(rosbag2_2269 rosbag2_2269/rosbag2_2269.cpp)
+target_link_libraries(rosbag2_2269 PUBLIC rosbag2_transport::rosbag2_transport)
+
 install(TARGETS
   rosbag2_2266
+  rosbag2_2269
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
